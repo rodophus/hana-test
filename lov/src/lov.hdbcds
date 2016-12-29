@@ -1,0 +1,20 @@
+context ListOfValue {
+   type shortSummary : String(20);
+   type logData {
+      cru : shortSummary;
+      crd : LocalDate;
+      lmu : shortSummary;
+      lmd : LocalDate;
+   };
+
+   entity Lov {
+      key id        : Integer64;
+          parentLov : association to Lov;
+          type      : shortSummary;
+          code      : shortSummary;
+          name      : String(50);
+          sortOrder : Integer;
+          comment   : String(500);
+          logData   : ListOfValue.logData;
+   };
+};
