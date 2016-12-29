@@ -1,5 +1,5 @@
 context ListOfValue {
-   type shortSummary : String(30);
+   type shortSummary : String(40);
    type logData {
       cru : shortSummary;
       crd : LocalDate;
